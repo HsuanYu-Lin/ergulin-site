@@ -66,7 +66,19 @@ A custom domain (e.g. ergulin.com) can be added later on the same Settings > Pag
 
 ## Adding new works
 
-Each artwork on `works.html` / `en/gallery.html` is one `<figure class="work">`
-block. Copy an existing block, change the image filename and the caption, and drop
-the new photo into `assets/img/`. The dimension-and-year caption convention
-(e.g. `29 × 27 × 20 cm, 2018`) is just text — write whatever fits the new piece.
+Works live in `assets/img/works/` as two files each: `<slug>.jpg` (large, for the
+lightbox) and `<slug>-s.jpg` (thumbnail). On `works.html` / `en/gallery.html` each
+piece is one `<figure class="work">` block inside its series section. Copy a block,
+change the two image paths, and edit the caption: `<span class="title">` is the name,
+`<span class="meta">` holds size and year, separated by ` · `.
+
+Works still missing information are marked in the captions with 尺寸待補 / 年代待補
+(dimensions TBC / year TBC). Search the HTML for `tbd` to find them.
+
+The old Weebly-era photos (`assets/img/*-2018.jpg` etc.) are no longer referenced
+by any page and can be deleted.
+
+Essays on `media.html` are ordered by year, newest first (15 pieces, each with its
+own `essay-<key>.html` page). The years marked 約 (c.) are estimates; change them
+in the HTML once confirmed. The 2020 essay 從媒介到材料 has no author named in the
+PDF supplied; add it in `media.html` and `essay-media.html` once known.

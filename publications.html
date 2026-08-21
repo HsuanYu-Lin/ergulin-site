@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>出版品 — 林振龍陶藝</title>
-<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<meta name="description" content="台灣陶藝家林振龍（二谷），瓷揚窯與敬山陶舍主人。Lin Chen-Long (Er-Gu), Taiwanese ceramist.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -23,71 +23,86 @@
       <a href="works.html">作品集錦</a>
       <a href="exhibitions.html">展覽選錄</a>
       <a href="publications.html" class="active">出版品</a>
-      <a href="media.html">相關報導</a>
+      <a href="media.html">評論與報導</a>
       <a href="contact.html">聯絡方式</a>
     </nav>
-    <a class="lang-switch" href="en/publications.html">English</a>
+    <a class="lang-switch" href="en/publications.html" lang="en">English</a>
   </div>
 </header>
 <main>
-
-<div class="section-title">
+<div class="page-head">
+  <span class="eyebrow">PUBLICATIONS</span>
   <h1>出版品</h1>
-  <span class="sub">Publications</span>
+  <p class="lead">個人作品集與相關出版。</p>
 </div>
 <div class="works-grid natural">
-  <figure class="work">
+<figure class="work">
     <a href="assets/img/pub-1991.jpg"><img src="assets/img/pub-1991.jpg" alt="書封：雙谷燒陶小集" loading="lazy"></a>
-    <figcaption>雙谷燒陶小集（1989，遠景出版社）</figcaption>
+    <figcaption><span class="meta">雙谷燒陶小集（1989，遠景出版社）</span></figcaption>
   </figure>
-  <figure class="work">
+<figure class="work">
     <a href="assets/img/pub-1992.jpg"><img src="assets/img/pub-1992.jpg" alt="書封：茶禪" loading="lazy"></a>
-    <figcaption>茶禪（1992，漢藝色研出版社）</figcaption>
+    <figcaption><span class="meta">茶禪（1992，漢藝色研出版社）</span></figcaption>
   </figure>
-  <figure class="work">
+<figure class="work">
     <a href="assets/img/pub-2010.jpg"><img src="assets/img/pub-2010.jpg" alt="書封：台灣名家美術100：陶瓷 林振龍" loading="lazy"></a>
-    <figcaption>台灣名家美術100：陶瓷 林振龍（2011，香柏樹文化出版社）</figcaption>
+    <figcaption><span class="meta">台灣名家美術100：陶瓷 林振龍（2011，香柏樹文化出版社）</span></figcaption>
   </figure>
-  <figure class="work">
+<figure class="work">
     <a href="assets/img/pub-2012-shape.jpg"><img src="assets/img/pub-2012-shape.jpg" alt="書封：形色大地：林振龍陶藝展畫冊" loading="lazy"></a>
-    <figcaption>形色大地：林振龍陶藝展畫冊（2012，台中屯區藝術中心出版）</figcaption>
+    <figcaption><span class="meta">形色大地：林振龍陶藝展畫冊（2012，台中屯區藝術中心出版）</span></figcaption>
   </figure>
-  <figure class="work">
+<figure class="work">
     <a href="assets/img/pub-2012-space.jpg"><img src="assets/img/pub-2012-space.jpg" alt="書封：空間釉彩：林振龍陶藝展畫冊" loading="lazy"></a>
-    <figcaption>空間釉彩：林振龍陶藝展畫冊（2012，國立歷史博物館出版）</figcaption>
+    <figcaption><span class="meta">空間釉彩：林振龍陶藝展畫冊（2012，國立歷史博物館出版）</span></figcaption>
   </figure>
 </div>
-
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
-    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
-    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 · 敬山陶舍</span>
+    <span><a href="mailto:ergu.lin55@gmail.com">ergu.lin55@gmail.com</a> · +886-2-2261-5388</span>
   </div>
 </footer>
 
-<dialog class="lightbox" id="lightbox">
-  <img id="lb-img" src="" alt="">
-  <div class="lb-caption" id="lb-cap"></div>
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <div class="lb-inner" id="lb-inner">
+    <img id="lb-img" src="" alt="">
+    <div class="lb-caption" id="lb-cap"></div>
+  </div>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">&#8249;</button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next">&#8250;</button>
+  <button class="lb-close" id="lb-close" aria-label="Close">&#215;</button>
 </dialog>
 <script>
 (function () {
   var dlg = document.getElementById('lightbox');
   if (!dlg || !dlg.showModal) return;
-  var img = document.getElementById('lb-img');
-  var cap = document.getElementById('lb-cap');
-  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      img.src = a.getAttribute('href');
-      var fc = a.parentNode.querySelector('figcaption');
-      cap.textContent = fc ? fc.textContent : '';
-      dlg.showModal();
-    });
+  var img = document.getElementById('lb-img'), cap = document.getElementById('lb-cap');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.works-grid .work a, .press-scan a'));
+  var i = 0;
+  function show(n) {
+    i = (n + links.length) % links.length;
+    var a = links[i];
+    img.src = a.getAttribute('href');
+    var fc = a.parentNode.querySelector('figcaption');
+    var t = fc ? fc.querySelector('.title') : null, m = fc ? fc.querySelector('.meta') : null;
+    cap.innerHTML = fc ? (t ? '<span class="t">' + t.textContent + '</span>' : '') + (m ? m.textContent : (t ? '' : fc.textContent)) : '';
+    img.alt = a.querySelector('img') ? a.querySelector('img').alt : '';
+  }
+  links.forEach(function (a, n) {
+    a.addEventListener('click', function (e) { e.preventDefault(); show(n); dlg.showModal(); });
   });
-  dlg.addEventListener('click', function () { dlg.close(); });
+  document.getElementById('lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(i - 1); });
+  document.getElementById('lb-next').addEventListener('click', function (e) { e.stopPropagation(); show(i + 1); });
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  document.getElementById('lb-inner').addEventListener('click', function (e) { if (e.target !== img) dlg.close(); });
+  img.addEventListener('click', function (e) { e.stopPropagation(); show(i + 1); });
+  dlg.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') show(i + 1);
+    if (e.key === 'ArrowLeft') show(i - 1);
+  });
 })();
 </script>
-
 </body>
 </html>

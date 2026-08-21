@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作家簡介 — 林振龍陶藝</title>
+<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="zh">林振龍陶藝</span>
+      <span class="en">Lin Chen-Long Fine Art</span>
+    </a>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="index.html">首頁</a>
+      <a href="about.html" class="active">作家簡介</a>
+      <a href="works.html">作品集錦</a>
+      <a href="exhibitions.html">展覽選錄</a>
+      <a href="publications.html">出版品</a>
+      <a href="media.html">相關報導</a>
+      <a href="contact.html">聯絡方式</a>
+    </nav>
+    <a class="lang-switch" href="en/about.html">English</a>
+  </div>
+</header>
+<main>
+
+<div class="section-title">
+  <h1>作家簡介</h1>
+  <span class="sub">About the Artist</span>
+</div>
+<div class="two-col">
+  <div class="prose">
+    <p>林振龍 1955 年生。1973 年進入王修功主持的漢唐陶藝廠習陶，1978 年拜「現代陶藝之父」林葆家教授為師，1979 年於新北市土城成立瓷揚窯工作室。字二谷，取其山之低、向山仰望之意，因此自署「敬山陶舍」。</p>
+    <p>1989 年起陸續舉辦「燒陶燒心」、「擁抱我土」、「壺外之音」、「大地陶情」、「空間·釉彩」、「形色大地」、「容器」、「陶情壺藝」、「石理陶生」等系列個展。作品曾應邀至國立歷史博物館、臺北市立美術館、國立臺灣美術館、鶯歌陶瓷博物館、中國浙江美術館、美國紐約市立大學美術館等地展出。</p>
+    <p>林振龍的創作結合西方極簡設計理念與東方釉色表現。從現代形式主義出發，利用幾何塊狀結構，搭建虛實掩映的視覺美感，並將青瓷、銅紅、鈞釉與白釉等東方傳統釉色的特有質感，再現於極簡幾何作品上，在西方理性結構中展現東方溫潤之美。</p>
+    <h3>曾任</h3>
+    <p>德霖技術學院兼任專業副教授／中國文化大學推廣教育講師／鶯歌陶瓷博物館陶瓷學院青瓷釉調配與窯燒教師／國立台灣工藝研發中心研習教師／國立科學工藝博物館蒐藏委員／高雄市立美術館評審暨典藏委員／鶯歌陶瓷博物館評審暨典藏委員／南投縣文化局玉山獎評審</p>
+  </div>
+  <figure class="portrait">
+    <img src="assets/img/portrait-studio.jpg" alt="林振龍於工作室">
+    <figcaption>林振龍於敬山陶舍</figcaption>
+  </figure>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
+    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-cap"></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('href');
+      var fc = a.parentNode.querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+
+</body>
+</html>

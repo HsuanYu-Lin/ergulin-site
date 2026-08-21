@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>林振龍陶藝 — Lin Chen-Long Fine Art</title>
+<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="zh">林振龍陶藝</span>
+      <span class="en">Lin Chen-Long Fine Art</span>
+    </a>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="index.html" class="active">首頁</a>
+      <a href="about.html">作家簡介</a>
+      <a href="works.html">作品集錦</a>
+      <a href="exhibitions.html">展覽選錄</a>
+      <a href="publications.html">出版品</a>
+      <a href="media.html">相關報導</a>
+      <a href="contact.html">聯絡方式</a>
+    </nav>
+    <a class="lang-switch" href="en/index.html">English</a>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-series">空間 · 釉彩 系列 SPACE &amp; GLAZE</span>
+    <h1 class="hero-title">林振龍<span class="en">Lin Chen-Long · Er-Gu</span></h1>
+    <p>林振龍，1955 年生於南投，台灣知名陶藝家，瓷揚窯創辦人。他是台灣最早推動陶藝家與書畫家合作的先行者之一，致力於現代陶藝的開拓。作品思索人與環境的關係，追求質樸之美，將西方形式主義與東方釉彩融於一爐。</p>
+    <span class="seal" aria-hidden="true">二谷</span>
+  </div>
+  <figure class="hero-img">
+    <img src="assets/img/68x68-2018.jpg" alt="林振龍「空間·釉彩」系列作品，68 × 68 cm，2018">
+  </figure>
+</section>
+
+<div class="section-title">
+  <h2>作品選粹</h2>
+  <span class="sub">Selected Works</span>
+</div>
+<div class="works-grid">
+  <figure class="work">
+    <a href="assets/img/68x68-2018.jpg"><img src="assets/img/68x68-2018.jpg" alt="林振龍陶藝作品，68 × 68 cm，2018" loading="lazy"></a>
+    <figcaption><span class="dim">68 × 68 cm</span>，2018</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="assets/img/29x27x20-2018.jpg"><img src="assets/img/29x27x20-2018.jpg" alt="林振龍陶藝作品，29 × 27 × 20 cm，2018" loading="lazy"></a>
+    <figcaption><span class="dim">29 × 27 × 20 cm</span>，2018</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="assets/img/40x17x6-5-2018.jpg"><img src="assets/img/40x17x6-5-2018.jpg" alt="林振龍陶藝作品，40 × 17 × 6.5 cm，2018" loading="lazy"></a>
+    <figcaption><span class="dim">40 × 17 × 6.5 cm</span>，2018</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="assets/img/40x20x6-2018.jpg"><img src="assets/img/40x20x6-2018.jpg" alt="林振龍陶藝作品，40 × 20 × 6 cm，2018" loading="lazy"></a>
+    <figcaption><span class="dim">40 × 20 × 6 cm</span>，2018</figcaption>
+  </figure>
+</div>
+<p style="margin-top:26px"><a href="works.html">瀏覽完整作品集錦 →</a></p>
+
+<blockquote class="pull-quote">
+  <p>「林振龍的陶藝創作，吸納百家藝風而能融會貫通、獨創一格；師法自然造化而能心領神會、再現新境。」</p>
+  <cite>— 劉鎮洲，國立台灣藝術大學工藝設計學系教授</cite>
+</blockquote>
+
+<div class="highlight">
+  <img src="assets/img/exhibition-2018.jpg" alt="2018 林振龍陶藝個展「土·瓷」展覽視覺">
+  <div>
+    <h3>土·瓷 — 2018 林振龍陶藝個展</h3>
+    <div class="meta">
+      日期：2018/12/3 – 12/31<br>
+      地點：名山藝術新竹館<br>
+      新竹市工業東二路 1 號 3 樓（新竹科學園區）
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
+    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-cap"></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('href');
+      var fc = a.parentNode.querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+
+</body>
+</html>

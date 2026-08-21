@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聯絡方式 — 林振龍陶藝</title>
+<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="zh">林振龍陶藝</span>
+      <span class="en">Lin Chen-Long Fine Art</span>
+    </a>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="index.html">首頁</a>
+      <a href="about.html">作家簡介</a>
+      <a href="works.html">作品集錦</a>
+      <a href="exhibitions.html">展覽選錄</a>
+      <a href="publications.html">出版品</a>
+      <a href="media.html">相關報導</a>
+      <a href="contact.html" class="active">聯絡方式</a>
+    </nav>
+    <a class="lang-switch" href="en/contact.html">English</a>
+  </div>
+</header>
+<main>
+
+<div class="section-title">
+  <h1>聯絡方式</h1>
+  <span class="sub">Contact</span>
+</div>
+<table class="contact-table">
+  <tr><th>電郵</th><td><a href="mailto:ergu.lin55@gmail.com">ergu.lin55@gmail.com</a></td></tr>
+  <tr><th>電話</th><td><a href="tel:+886222615388">+886-2-2261-5388</a></td></tr>
+  <tr><th>陶舍</th><td>敬山陶舍 · 瓷揚窯（新北市土城）</td></tr>
+</table>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
+    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-cap"></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('href');
+      var fc = a.parentNode.querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+
+</body>
+</html>

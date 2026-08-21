@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>出版品 — 林振龍陶藝</title>
+<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="zh">林振龍陶藝</span>
+      <span class="en">Lin Chen-Long Fine Art</span>
+    </a>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="index.html">首頁</a>
+      <a href="about.html">作家簡介</a>
+      <a href="works.html">作品集錦</a>
+      <a href="exhibitions.html">展覽選錄</a>
+      <a href="publications.html" class="active">出版品</a>
+      <a href="media.html">相關報導</a>
+      <a href="contact.html">聯絡方式</a>
+    </nav>
+    <a class="lang-switch" href="en/publications.html">English</a>
+  </div>
+</header>
+<main>
+
+<div class="section-title">
+  <h1>出版品</h1>
+  <span class="sub">Publications</span>
+</div>
+<div class="works-grid natural">
+  <figure class="work">
+    <a href="assets/img/pub-1991.jpg"><img src="assets/img/pub-1991.jpg" alt="書封：雙谷燒陶小集" loading="lazy"></a>
+    <figcaption>雙谷燒陶小集（1989，遠景出版社）</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="assets/img/pub-1992.jpg"><img src="assets/img/pub-1992.jpg" alt="書封：茶禪" loading="lazy"></a>
+    <figcaption>茶禪（1992，漢藝色研出版社）</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="assets/img/pub-2010.jpg"><img src="assets/img/pub-2010.jpg" alt="書封：台灣名家美術100：陶瓷 林振龍" loading="lazy"></a>
+    <figcaption>台灣名家美術100：陶瓷 林振龍（2011，香柏樹文化出版社）</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="assets/img/pub-2012-shape.jpg"><img src="assets/img/pub-2012-shape.jpg" alt="書封：形色大地：林振龍陶藝展畫冊" loading="lazy"></a>
+    <figcaption>形色大地：林振龍陶藝展畫冊（2012，台中屯區藝術中心出版）</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="assets/img/pub-2012-space.jpg"><img src="assets/img/pub-2012-space.jpg" alt="書封：空間釉彩：林振龍陶藝展畫冊" loading="lazy"></a>
+    <figcaption>空間釉彩：林振龍陶藝展畫冊（2012，國立歷史博物館出版）</figcaption>
+  </figure>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
+    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-cap"></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('href');
+      var fc = a.parentNode.querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+
+</body>
+</html>

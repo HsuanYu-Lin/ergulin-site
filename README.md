@@ -10,10 +10,9 @@ just plain HTML and CSS, ready for GitHub Pages.
 index.html            中文首頁
 about.html            作家簡介
 works.html            作品集錦
-exhibitions.html      展覽選錄
-publications.html     出版品
-media.html            相關報導 (video + three essays)
-contact.html          聯絡方式
+archive.html          展覽與出版 (exhibition posters + publications)
+media.html            評論與報導 (essays + video)
+essay-*.html          full text of each essay
 en/                   English versions of all pages
 assets/css/style.css  the one stylesheet
 assets/img/           all photos (see below)

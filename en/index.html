@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lin Chen-Long Fine Art</title>
+<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="zh">林振龍陶藝</span>
+      <span class="en">Lin Chen-Long Fine Art</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Lin</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="publications.html">Publications</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="lang-switch" href="../index.html">中文</a>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-series">SPACE &amp; GLAZE SERIES</span>
+    <h1 class="hero-title">林振龍<span class="en">Lin Chen-Long · Er-Gu</span></h1>
+    <p>Lin Chen-Long, born in 1955 in Nantou County, is a renowned Taiwanese ceramist and founder of the Tsu Yang Kiln (瓷揚窯), one of Taiwan's most celebrated kilns. A pioneer in promoting collaboration between ceramists, painters, and calligraphers, Lin is dedicated to advancing modern ceramics. His work contemplates the relationship between humanity and the environment while embracing the beauty of simplicity, blending Western Formalism with Eastern glazes in a harmonious fusion of the two traditions.</p>
+    <span class="seal" aria-hidden="true">二谷</span>
+  </div>
+  <figure class="hero-img">
+    <img src="../assets/img/68x68-2018.jpg" alt="Space &amp; Glaze series work by Lin Chen-Long, 68 × 68 cm, 2018">
+  </figure>
+</section>
+
+<div class="section-title">
+  <h2>Selected Works</h2>
+  <span class="sub">作品選粹</span>
+</div>
+<div class="works-grid">
+  <figure class="work">
+    <a href="../assets/img/68x68-2018.jpg"><img src="../assets/img/68x68-2018.jpg" alt="Ceramic work by Lin Chen-Long, 68 × 68 cm, 2018" loading="lazy"></a>
+    <figcaption><span class="dim">68 × 68 cm</span>, 2018</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="../assets/img/29x27x20-2018.jpg"><img src="../assets/img/29x27x20-2018.jpg" alt="Ceramic work by Lin Chen-Long, 29 × 27 × 20 cm, 2018" loading="lazy"></a>
+    <figcaption><span class="dim">29 × 27 × 20 cm</span>, 2018</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="../assets/img/40x17x6-5-2018.jpg"><img src="../assets/img/40x17x6-5-2018.jpg" alt="Ceramic work by Lin Chen-Long, 40 × 17 × 6.5 cm, 2018" loading="lazy"></a>
+    <figcaption><span class="dim">40 × 17 × 6.5 cm</span>, 2018</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="../assets/img/40x20x6-2018.jpg"><img src="../assets/img/40x20x6-2018.jpg" alt="Ceramic work by Lin Chen-Long, 40 × 20 × 6 cm, 2018" loading="lazy"></a>
+    <figcaption><span class="dim">40 × 20 × 6 cm</span>, 2018</figcaption>
+  </figure>
+</div>
+<p style="margin-top:26px"><a href="gallery.html">Browse the full gallery →</a></p>
+
+<blockquote class="pull-quote">
+  <p>"Lin Chen-Long is an artist who absorbs various artistic trends and learns from nature."</p>
+  <cite>— Liou Chen-chou, Professor, National Taiwan University of Arts</cite>
+</blockquote>
+
+<div class="highlight">
+  <img src="../assets/img/exhibition-2018.jpg" alt="Key visual of Clay and Ceramics, Lin Chen-Long's 2018 solo exhibition">
+  <div>
+    <h3>Clay and Ceramics — Lin Chen-Long 2018 Solo Exhibition</h3>
+    <div class="meta">
+      Dec 3 – 31, 2018<br>
+      Mingshan Art Gallery, Hsinchu Branch<br>
+      3F, No. 1, Gongye E. 2nd Rd., Hsinchu City (HSP Link)
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
+    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-cap"></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('href');
+      var fc = a.parentNode.querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+
+</body>
+</html>

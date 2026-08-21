@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Lin — Lin Chen-Long Fine Art</title>
+<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="zh">林振龍陶藝</span>
+      <span class="en">Lin Chen-Long Fine Art</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Lin</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="publications.html">Publications</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="lang-switch" href="../about.html">中文</a>
+  </div>
+</header>
+<main>
+
+<div class="section-title">
+  <h1>About Lin</h1>
+  <span class="sub">作家簡介</span>
+</div>
+<div class="two-col">
+  <div class="prose">
+    <p>Lin Chen-Long, born in 1955 in Nantou County, is a Taiwanese ceramist. He established the Tsu Yang Kiln (瓷揚窯), one of the most famous Taiwanese kilns, and devotes himself to modern ceramics. Lin is one of the earliest promoters encouraging cooperation between ceramists and painters and calligraphers in Taiwan. In his works, Lin reflects upon the relationship between human beings and the environment and explores the beauty of simplicity. His artworks demonstrate the harmonious coexistence of Formalism, an art concept from the West emphasizing simplicity, and Oriental glazes, materials originating in the East.</p>
+    <p>In the "Space and Glaze" series, Lin returns to three basic elements of a picture — point, line, and surface — and interprets them in a new spirit. He creates works with simple geometric blocks, cylinders, and tea bowls, representing not only "points" in Lin's concept but also a symbol of Oriental culture. Moreover, Lin gives traditional Chinese glazes a new form of expression: he applies celadon and copper-red glaze, two famous types of conventional Chinese glazes, on the blocks and tea bowls, and pure white glaze on the cylinders. In doing so, Lin proves that Chinese glazes can be used creatively rather than only as seen on Chinese antique vases. The series shows the beauty of point-line-surface composition in three dimensions, and how traditional Chinese glazes can be expressed in a modern way.</p>
+  </div>
+  <figure class="portrait">
+    <img src="../assets/img/portrait-about.jpg" alt="Lin Chen-Long in his studio">
+    <figcaption>Lin Chen-Long at Jingshan Pottery Studio</figcaption>
+  </figure>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
+    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-cap"></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('href');
+      var fc = a.parentNode.querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+
+</body>
+</html>

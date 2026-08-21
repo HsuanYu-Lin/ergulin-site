@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Lin Chen-Long Fine Art</title>
+<meta name="description" content="Lin Chen-Long (Er-Gu), Taiwanese ceramist, founder of the Tsu Yang Kiln. 台灣陶藝家林振龍（二谷），瓷揚窯創辦人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="zh">林振龍陶藝</span>
+      <span class="en">Lin Chen-Long Fine Art</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Lin</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="lang-switch" href="../publications.html">中文</a>
+  </div>
+</header>
+<main>
+
+<div class="section-title">
+  <h1>Publications</h1>
+  <span class="sub">出版品</span>
+</div>
+<div class="works-grid natural">
+  <figure class="work">
+    <a href="../assets/img/pub-1991.jpg"><img src="../assets/img/pub-1991.jpg" alt="Book cover: Er-Gu's Art of Ceramics" loading="lazy"></a>
+    <figcaption>Er-Gu's Art of Ceramics (1989, Vista Publishing)</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="../assets/img/pub-1992.jpg"><img src="../assets/img/pub-1992.jpg" alt="Book cover: Tea Zen" loading="lazy"></a>
+    <figcaption>Tea Zen (1992, Han-Yi Press)</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="../assets/img/pub-2010.jpg"><img src="../assets/img/pub-2010.jpg" alt="Book cover: 100 Taiwanese Artists: Lin Chen-Long" loading="lazy"></a>
+    <figcaption>100 Taiwanese Artists: Lin Chen-Long (2011, Xiang Bai Shu Press)</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="../assets/img/pub-2012-shape.jpg"><img src="../assets/img/pub-2012-shape.jpg" alt="Book cover: Shape / Color / the Earth — Lin Chen-Long's Art of Ceramics" loading="lazy"></a>
+    <figcaption>Shape / Color / the Earth — Lin Chen-Long's Art of Ceramics (2012, Taichung Tun Qu Art Center Press)</figcaption>
+  </figure>
+  <figure class="work">
+    <a href="../assets/img/pub-2012-space.jpg"><img src="../assets/img/pub-2012-space.jpg" alt="Book cover: Space & Glaze" loading="lazy"></a>
+    <figcaption>Space & Glaze (2012, National History Museum Press)</figcaption>
+  </figure>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 林振龍 Lin Chen-Long · 瓷揚窯 Tsu Yang Kiln</span>
+    <span>ergu.lin55@gmail.com · +886-2-2261-5388</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption" id="lb-cap"></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.works-grid .work a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('href');
+      var fc = a.parentNode.querySelector('figcaption');
+      cap.textContent = fc ? fc.textContent : '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+
+</body>
+</html>
